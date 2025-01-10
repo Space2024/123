@@ -20,7 +20,7 @@ export const useFeedbackStore = create<FeedbackStore>((set) => ({
   submitFeedback: async (feedback) => {
     try {
       set({ loading: true, error: null });
-      await axios.post('http://localhost:8080/feedback_submit', feedback);
+      await axios.post('https://cust.spacetextiles.net/feedback_submit', feedback);
       set({ loading: false });
     } catch (error) {
       set({ 
